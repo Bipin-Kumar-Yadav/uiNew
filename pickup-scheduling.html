@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Schedule Pickup</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header>
+            <h1 style="color: whitesmoke;">Welcome, <span id="username"></span></h1>
+            <nav>
+                <ul id="navMenu"></ul>
+            </nav>
+        </header>
+        <main>
+            <h2 style="text-align: center;">Schedule Pickup</h2>
+            <div id="pickupUpdate">
+                <form id="pickupForm">
+                    <label for="pickupBookingId">Booking ID:</label>
+                    <input type="text" id="pickupBookingId" required>
+                    <label for="pickupDateTime">Pickup Date/Time:</label>
+                    <input type="datetime-local" id="pickupDateTime" required>
+                    <button type="submit">Schedule Pickup</button>
+                </form>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Parcel Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="register-container">
+            <h1>Register</h1>
+        <form id="registerForm">
+            <label for="customerName">Customer Name:</label>
+            <input type="text" id="customerName" name="customerName" maxlength="50" required placeholder="Enter your full name">
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email">
+            
+            <label for="mobile">Mobile Number:</label>
+            <div class="mobile-input">
+                <select id="countryCode">
+                    <option value="+91">+91 (India)</option>
+                    <option value="+1">+1 (USA)</option>
+                </select>
+                <input type="text" id="mobile" name="mobile" pattern="\d{10}" required placeholder="Enter your 10-digit mobile number">
+            </div>
+            
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" required placeholder="Enter your complete address"></textarea>
+            
+            <label for="userId">User ID:</label>
+            <input type="text" id="userId" name="userId" minlength="5" maxlength="20" required placeholder="Choose a User ID">
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" maxlength="30" required placeholder="Choose a Password">
+            
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" maxlength="30" required placeholder="Confirm your Password">
+            
+            <label for="role">Role:</label>
+            <select id="role" name="role" required>
+                <option value="" disabled selected>Select Role</option>
+                <option value="customer">Customer</option>
+                <option value="officer">Officer</option>
+            </select>
+            
+            <div>
+                <button class="register-btn" type="submit">Register</button>
+                <button class="reset-btn" type="reset">Reset</button>
+            </div>
+        </form>
+        <p id="errorMessage" class="error"></p>
+        <p>Already have an account? <a href="index.html">Login here</a></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

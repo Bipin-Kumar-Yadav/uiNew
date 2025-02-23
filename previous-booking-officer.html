@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Previous Bookings</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header>
+            <h1 style="color: whitesmoke;">Welcome, <span id="username"></span></h1>
+            <nav>
+                <ul id="navMenu"></ul>
+            </nav>
+        </header>
+        <main>
+           <div id="bookingHistory">
+            <h2 style="text-align: center;">Previous Bookings</h2>
+            <form id="previousBookingOfficerForm">
+                <label for="userId">User ID:</label>
+                <input type="text" id="userId" required>
+                <button type="submit">Search</button>
+            </form>
+            <div id="bookingsList"></div>
+            
+           </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

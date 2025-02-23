@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Parcel Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-container">
+            <h1>Login</h1>
+        <form id="loginForm">
+            <label for="userId">User ID:</label>
+            <input type="text" id="userId" name="userId" minlength="5" maxlength="20" required placeholder="Enter your User ID">
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" maxlength="30" required placeholder="Enter your Password">
+            
+            <label for="role">Role:</label>
+            <select id="role" name="role" required>
+                <option value="" disabled selected>Select Role</option>
+                <option value="customer">Customer</option>
+                <option value="officer">Officer</option>
+            </select>
+            
+            <button class="login-btn" type="submit">Login</button>
+        </form>
+        <p id="errorMessage" class="error"></p>
+        <p>Don't have an account? <a href="register.html">Register here</a></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delivery Status</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header>
+            <h1 style="color: whitesmoke;">Welcome, <span id="username"></span></h1>
+            <nav>
+                <ul id="navMenu"></ul>
+            </nav>
+        </header>
+        <main>
+            <h2 style="text-align: center;">Update Delivery Status</h2>
+            <div id="deliveryStatus">
+                <form id="statusForm">
+                    <label for="statusBookingId">Booking ID:</label>
+                    <input type="text" id="statusBookingId" required>
+                    <label for="newStatus">New Status:</label>
+                    <select id="newStatus" required>
+                        <option value="Picked Up">Picked Up</option>
+                        <option value="In Transit">In Transit</option>
+                        <option value="Delivered">Delivered</option>
+                        <option value="Returned">Returned</option>
+                    </select>
+                    <button type="submit">Update Status</button>
+                </form>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

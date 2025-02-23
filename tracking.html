@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tracking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header>
+            <h1 style="color: whitesmoke;">Welcome, <span id="username"></span></h1>
+            <nav>
+                <ul id="navMenu"></ul>
+            </nav>
+        </header>
+        <main>
+            <div id="trackingDetails">
+                <h2 style="text-align: center;">Track Parcel</h2>
+            <form id="trackingForm">
+                <label for="trackingId">Booking ID:</label>
+                <input type="text" id="trackingId"  required>
+                <button type="submit">Search</button>
+            </form>
+            <div id="trackingResult"></div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice - Parcel Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header>
+            <h1 style="color: whitesmoke;">Welcome, <span id="username"></span></h1>
+            <nav>
+                <ul id="navMenu">
+                    <!-- Menu items will be populated by JavaScript -->
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h2 style="text-align: center;">Invoice</h2>
+            <div id="invoiceDetails">
+                <!-- Invoice details will be populated by JavaScript -->
+            </div>
+            <div style=" justify-self: center;">
+                <button class="printInvoice" onclick="window.print()">Print Invoice</button>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

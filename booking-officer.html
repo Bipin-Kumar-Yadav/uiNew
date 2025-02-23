@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Service - Parcel Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <header>
+            <h1 style="color: whitesmoke;">Welcome, <span id="username"></span></h1>
+            <nav>
+                <ul id="navMenu">
+                    <!-- Menu items will be populated by JavaScript -->
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h2 style="text-align: center;">Booking Service</h2>
+            <form id="bookingOfficerForm" style="gap:2vw">
+                <fieldset style="min-width: 600px; margin: 0 auto;">
+                    <legend>Sender Information</legend>
+                    <div class="input_style">
+                        <label for="senderName">Name:</label>
+                        <input type="text" id="sender_Name" name="senderName"  >
+                    </div>
+                    <div class="input_style">
+                        <label for="senderContact">Contact Details:</label>
+                        <input type="text" id="sender_Contact" name="senderContact" >
+                    </div>
+                    <div class="input_style">
+                        <label for="senderAddress">Address:</label>
+                        <textarea id="sender_Address" name="senderAddress" ></textarea>
+                    </div>
+                </fieldset>
+
+                <fieldset style="min-width: 600px; margin: 0 auto;">
+                    <legend>Receiver Information</legend>
+                    <div class="input_style">
+                        <label for="receiverName">Name:</label>
+                        <input type="text" id="receiverName" name="receiverName" required>
+                    </div>
+                    <div class="input_style">
+                        <label for="receiverAddress">Address:</label>
+                        <textarea id="receiverAddress" name="receiverAddress" required></textarea>
+                    </div>
+                    <div class="input_style">
+
+                        <label for="receiverPin">Pin Code:</label>
+                        <input type="text" id="receiverPin" name="receiverPin" pattern="\d{6}" required>
+                    </div>
+                    <div class="input_style">
+
+                        <label for="receiverContact">Contact Details:</label>
+                        <input type="text" id="receiverContact" name="receiverContact" required>
+                    </div>
+
+                </fieldset>
+
+                <fieldset style="min-width: 600px; margin: 0 auto;">
+                    <legend>Parcel Details</legend>
+
+                    <div class="input_style">
+                        <label for="parcelSize">Size and Weight:</label>
+                        <input type="text" id="parcelSize" name="parcelSize" required>
+                    </div>
+                    <div class="input_style">
+                        <label for="parcelContents">Contents Description:</label>
+                        <textarea id="parcelContents" name="parcelContents" required></textarea>
+                    </div>
+                </fieldset>
+
+                <fieldset style="min-width: 600px; margin: 0 auto;">
+                    <legend>Shipping Options</legend>
+                    <div class="input_style">
+                        <label for="deliverySpeed">Delivery Speed:</label>
+                        <select id="deliverySpeed" name="deliverySpeed" required>
+                            <option value="standard">Standard</option>
+                            <option value="express">Express</option>
+                        </select>
+                    </div>
+
+
+                    <div class="input_style">
+                        <label for="packaging">Packaging Preferences:</label>
+                        <select id="packaging" name="packaging" required>
+                            <option value="standard">Standard Packaging</option>
+                            <option value="custom">Custom Packaging</option>
+                            <option value="eco-friendly">Eco-friendly Packaging</option>
+                            <option value="fragile">Fragile Item Handling</option>
+                        </select>
+                    </div>
+
+                </fieldset>
+
+                <fieldset style="min-width: 600px; margin: 0 auto;">
+                    <legend>Date and Time Selection</legend>
+                    <div class="input_style">
+                        <label for="pickupTime">Preferred Pickup Time:</label>
+                        <input type="datetime-local" id="pickupTime" name="pickupTime" required>
+                    </div>
+                    <div class="input_style">
+                        <label for="dropOffTime">Preferred Drop Off Time:</label>
+                        <input type="datetime-local" id="dropOffTime" name="dropOffTime" required>
+                    </div>
+
+                </fieldset>
+
+                <fieldset style="min-width: 600px; margin: 0 auto;">
+                    <legend>Service Cost</legend>
+
+                    <div class="input_style">
+                        <label for="serviceCost">Service Cost:</label>
+                        <input type="text" id="serviceCost" name="serviceCost" readonly>
+                    </div>
+                </fieldset>
+
+                <fieldset style="min-width: 600px; margin: 0 auto;">
+                    <legend>Additional Services</legend>
+                    <div class="input_style">
+                        <label for="insurance">Insurance Options:</label>
+                        <select id="insurance" name="insurance">
+                            <option value="none">None</option>
+                            <option value="basic">Basic</option>
+                            <option value="premium">Premium</option>
+                        </select>
+                    </div>
+
+                    <div class="input_style">
+                        <label for="tracking">Tracking Services:</label>
+                        <input type="checkbox" id="tracking" name="tracking">
+                    </div>
+
+                </fieldset>
+
+                <button type="submit">Proceed to Payment</button>
+            </form>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

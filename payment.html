@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Parcel Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard-container" >
+        <header>
+            <h1 style="color: whitesmoke;">Welcome, <span id="username"></span></h1>
+            <nav>
+                <ul id="navMenu">
+                    <!-- Menu items will be populated by JavaScript -->
+                </ul>
+            </nav>
+        </header>
+        <main >
+            <div id="paymentSection" class="hidden">
+                <h2 style="text-align: center;">Payment</h2>
+            <form id="paymentForm"  >
+                <div class="input_style">
+                    <label for="billAmount">Bill Amount:</label>
+                <input type="text" id="billAmount" name="billAmount" readonly>
+                </div>
+                
+               <div class="input_style">
+                <label for="paymentMode">Mode of Payment:</label>
+                <select id="paymentMode" name="paymentMode" required>
+                    <option value="debit">Debit Card</option>
+                    <option value="credit">Credit Card</option>
+                </select>
+               </div>
+                
+                <div class="button_div_style">     
+                    <button type="submit">Pay Now</button>
+                <button type="button" onclick="window.location.href='booking.html'">Back to Home</button>
+                
+            </div>
+            </form>
+            </div>
+             <!-- Card Details Section -->
+             <div id="cardDetailsSection" class="hidden">
+                <h3 style="text-align: center;">Card Details</h3>
+                <form id="cardDetailsForm" onsubmit="return processCardPayment(event)">
+                    <div class="input_style">
+                        <label>Card Type:</label>
+                        <input type="text" id="cardType" readonly>
+                    </div>
+                    
+                    <div class="input_style">
+                        <label>Card Number:</label>
+                        <input type="number" id="cardNumber" pattern="\d{16}" 
+                               maxlength="16" required placeholder="1234 5678 9012 3456">
+                    </div>
+                    
+                    <div class="input_style">
+                        <label>Card Holder Name:</label>
+                        <input type="text" id="cardHolderName" required 
+                               placeholder="John Doe">
+                    </div>
+                    
+                    <div class="input_style">
+                        <label>Expiry Date:</label>
+                        <input type="text" id="expiryDate" pattern="\d{2}/\d{2}" 
+                               maxlength="5" required placeholder="MM/YY">
+                    </div>
+                    
+                    <div class="input_style">
+                        <label>CVV:</label>
+                        <input type="text" id="cvv" pattern="\d{3}" 
+                               maxlength="3" required placeholder="123">
+                    </div>
+                    
+                        <button type="submit">Make Payment</button>
+                </form>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
